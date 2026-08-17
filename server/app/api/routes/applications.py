@@ -2,6 +2,7 @@ import random
 import string
 
 from fastapi import APIRouter, Depends, status
+from fastapi import APIRouter, BackgroundTasks, Depends, status
 from sqlalchemy.orm import Session
 
 from app.api.deps import get_current_phone
@@ -9,6 +10,7 @@ from app.db.session import get_db
 from app.models.applicant import Applicant
 from app.models.application import Application
 from app.schemas.application import ApplicationCreate, ApplicationSubmittedResponse
+from app.services.notification_service import notify_new_application
 
 router = APIRouter(prefix="/applications", tags=["applications"])
 
@@ -45,13 +47,13 @@ def get_or_create_applicant(phone_number: str, applicant_data, db: Session) -> A
 @router.post("", response_model=ApplicationSubmittedResponse, status_code=status.HTTP_201_CREATED)
 def submit_application(
     payload: ApplicationCreate,
+    background_tasks: BackgroundTasks,
     phone_number: str = Depends(get_current_phone),
     db: Session = Depends(get_db),
 ):
     applicant = get_or_create_applicant(phone_number, payload.applicant, db)
 
     reference_number = generate_reference_number()
-    # Extremely unlikely to collide given the charset, but guard against it anyway
     while db.query(Application).filter(Application.reference_number == reference_number).first():
         reference_number = generate_reference_number()
 
@@ -68,7 +70,7 @@ def submit_application(
     db.commit()
     db.refresh(application)
 
-    # TODO: trigger staff notification here (email/Slack) once notification_service.py is built
+    background_tasks.add_task(notify_new_application, application, applicant)
 
     return ApplicationSubmittedResponse(
         reference_number=application.reference_number,
