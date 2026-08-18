@@ -9,6 +9,7 @@ from slowapi.util import get_remote_address
 from app.core.config import settings
 from app import models  # noqa: F401
 from app.api.routes import auth, applications
+from app.api.routes import auth, applications, admin
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(name)s: %(message)s")
 
@@ -28,6 +29,7 @@ app.add_middleware(
 
 app.include_router(auth.router)
 app.include_router(applications.router)
+app.include_router(admin.router)
 
 
 @app.get("/")

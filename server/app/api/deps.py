@@ -21,3 +21,21 @@ def get_current_phone(credentials: HTTPAuthorizationCredentials = Depends(bearer
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Invalid token")
 
     return phone_number
+
+def get_current_staff(credentials: HTTPAuthorizationCredentials = Depends(bearer_scheme)) -> str:
+    """Extracts and validates a staff JWT. Distinct from get_current_phone -
+    staff and applicant tokens are never interchangeable, enforced by the 'role' claim."""
+    token = credentials.credentials
+    try:
+        payload = decode_access_token(token)
+    except JWTError:
+        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Invalid or expired token")
+
+    if payload.get("role") != "staff":
+        raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="Staff access required")
+
+    staff_id = payload.get("sub")
+    if staff_id is None:
+        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Invalid token")
+
+    return staff_id
