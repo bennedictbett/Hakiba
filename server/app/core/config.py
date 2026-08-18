@@ -27,6 +27,8 @@ class Settings(BaseSettings):
     RESEND_API_KEY: str = ""
     SLACK_WEBHOOK_URL: str = ""
 
+    STAFF_NOTIFICATION_EMAIL: str = ""
+
     # SMS
     SMS_API_KEY: str = ""
     SMS_USERNAME: str = ""
