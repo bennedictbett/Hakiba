@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import Nav from "@/components/Nav";
 
 const MONTHLY_RATE = 0.10; // 10% flat facilitation fee, deducted from disbursement - not paid upfront
 const MIN_AMOUNT = 1000;
@@ -118,15 +119,7 @@ function HowItWorks() {
 export default function HomePage() {
   return (
     <main>
-      <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
-        <span className="font-display text-xl font-bold text-savanna">Hakiba</span>
-        <a
-          href="/login"
-          className="rounded-md border border-savanna px-4 py-2 font-body text-sm font-medium text-savanna transition-colors hover:bg-savanna hover:text-paper"
-        >
-          Log in
-        </a>
-      </nav>
+      <Nav />
 
       <section className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 px-6 py-12 sm:py-20 lg:grid-cols-2">
         <div>
