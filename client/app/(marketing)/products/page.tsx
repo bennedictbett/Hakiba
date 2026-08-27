@@ -1,3 +1,4 @@
+import Nav from "@/components/Nav";
 const PRODUCTS = [
   {
     name: "Quick Cash",
@@ -31,15 +32,7 @@ const PRODUCTS = [
 export default function ProductsPage() {
   return (
     <main>
-      <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
-        <a href="/" className="font-display text-xl font-bold text-savanna">Hakiba</a>
-        <a
-          href="/login"
-          className="rounded-md border border-savanna px-4 py-2 font-body text-sm font-medium text-savanna transition-colors hover:bg-savanna hover:text-paper"
-        >
-          Log in
-        </a>
-      </nav>
+      <Nav />
 
       <section className="mx-auto max-w-3xl px-6 pt-16 text-center sm:pt-24">
         <h1 className="mb-4 font-display text-4xl font-bold text-ink sm:text-5xl">Loan products</h1>
