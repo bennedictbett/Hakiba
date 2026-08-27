@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Nav from "@/components/Nav";
 
 const FAQS = [
   {
@@ -54,16 +55,7 @@ function FaqItem({ q, a }: { q: string; a: string }) {
 export default function FaqPage() {
   return (
     <main>
-      <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
-        <a href="/" className="font-display text-xl font-bold text-savanna">Hakiba</a>
-        <a
-        
-          href="/login"
-          className="rounded-md border border-savanna px-4 py-2 font-body text-sm font-medium text-savanna transition-colors hover:bg-savanna hover:text-paper"
-        >
-          Log in
-        </a>
-      </nav>
+      <Nav />
 
       <section className="mx-auto max-w-2xl px-6 py-16 sm:py-24">
         <h1 className="mb-3 font-display text-3xl font-bold text-ink sm:text-4xl">Frequently asked questions</h1>
