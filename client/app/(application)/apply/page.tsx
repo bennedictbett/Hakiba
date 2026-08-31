@@ -76,9 +76,7 @@ export default function ApplyPage() {
             We&apos;ll review your application and get back to you shortly. Keep your reference number handy.
           </p>
           
-            href="/"
-            className="mt-8 inline-block rounded-md border border-savanna px-6 py-3 font-display text-sm font-semibold text-savanna transition-colors hover:bg-savanna hover:text-paper"
-          >
+            <a href="/" className="mt-8 inline-block rounded-md border border-savanna px-6 py-3 font-display text-sm font-semibold text-savanna transition-colors hover:bg-savanna hover:text-paper">
             Back to home
           </a>
         </div>
