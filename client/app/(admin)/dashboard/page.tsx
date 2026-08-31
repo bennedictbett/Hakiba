@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, FormEvent } from "react";
+import { Eye, EyeOff } from "lucide-react";
 import {
   staffLogin,
   listApplications,
@@ -9,6 +10,7 @@ import {
   ApiError,
   AdminApplication,
 } from "@/lib/api";
+
 
 function formatKES(amount: string): string {
   return new Intl.NumberFormat("en-KE", { maximumFractionDigits: 0 }).format(Number(amount));
@@ -44,6 +46,7 @@ function LoginForm({ onSuccess }: { onSuccess: () => void }) {
   const [password, setPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [showPassword, setShowPassword] = useState(false);
 
   async function handleSubmit(e: FormEvent) {
     e.preventDefault();
@@ -78,13 +81,23 @@ function LoginForm({ onSuccess }: { onSuccess: () => void }) {
           </div>
           <div>
             <label className="mb-2 block font-body text-sm text-ink/70">Password</label>
-            <input
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-              className="w-full rounded-md border border-mist bg-white px-4 py-3 font-body text-ink focus:border-savanna"
-            />
+            <div className="relative">
+              <input
+                type={showPassword ? "text" : "password"}
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
+                className="w-full rounded-md border border-mist bg-white px-4 py-3 pr-11 font-body text-ink focus:border-savanna"
+              />
+              <button
+                type="button"
+                onClick={() => setShowPassword(!showPassword)}
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-ink/40 hover:text-ink/70"
+                aria-label={showPassword ? "Hide password" : "Show password"}
+              >
+                {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+              </button>
+            </div>
           </div>
 
           {error && (
