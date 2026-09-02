@@ -123,6 +123,41 @@ function WhySection() {
   );
 }
 
+function ReachSection() {
+  return (
+    <section className="bg-savanna py-16 sm:py-20">
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="grid grid-cols-1 items-center gap-8 sm:grid-cols-[1.2fr_0.8fr] sm:gap-10">
+          <div>
+            <h2 className="max-w-[16ch] font-display text-2xl font-semibold text-paper sm:text-3xl">
+              Questions before you apply? Talk to a real person.
+            </h2>
+            <p className="mt-3 max-w-[42ch] font-body text-sm text-paper/70 sm:text-base">
+              Our support team responds on WhatsApp during working hours — no
+              call centre queue, no chatbot loop.
+            </p>
+          </div>
+
+          <div className="flex flex-wrap gap-3">
+            <a
+              href="https://wa.me/254700000000"
+              className="rounded-lg bg-marigold px-6 py-3 font-body text-sm font-medium text-ink transition-colors hover:bg-marigold-dark"
+            >
+              Chat on WhatsApp
+            </a>
+            <a
+              href="tel:+254700000000"
+              className="rounded-lg border border-paper/40 px-6 py-3 font-body text-sm font-medium text-paper transition-colors hover:border-paper"
+            >
+              Call +254 700 000 000
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function HowItWorks() {
   const steps = [
     { title: "Verify your phone", detail: "Log in with an OTP sent to your number — no password to remember." },
@@ -148,6 +183,7 @@ function HowItWorks() {
     </section>
   );
 }
+
 
 export default function HomePage() {
   return (
@@ -181,6 +217,8 @@ export default function HomePage() {
       <div className="mx-auto max-w-6xl px-6">
         <HowItWorks />
       </div>
+
+      <ReachSection />
 
       <section className="mx-auto max-w-6xl px-6 pb-24">
         <div className="rounded-lg bg-savanna px-8 py-12 text-center sm:py-16">
