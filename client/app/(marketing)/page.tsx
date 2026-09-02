@@ -90,6 +90,39 @@ function TrustBar() {
   );
 }
 
+function WhySection() {
+  const items = [
+    { title: "Fees you see upfront", detail: "..." },
+    { title: "No CRB check required", detail: "..." },
+    { title: "Decisions in hours, not days", detail: "..." },
+    { title: "Straight to M-Pesa", detail: "..." },
+  ];
+
+  return (
+    <section className="py-16 sm:py-24">
+      <div className="mb-12 max-w-md">
+        <div className="mb-2 font-mono text-xs uppercase tracking-wider text-marigold-dark">
+          Why people choose Hakiba
+        </div>
+        <h2 className="font-display text-3xl font-semibold text-ink sm:text-4xl">
+          Straightforward terms, nothing buried in fine print.
+        </h2>
+      </div>
+
+      <div className="border-t border-mist">
+        {items.map((item) => (
+          <div key={item.title} className="grid grid-cols-1 gap-2 border-b border-mist py-8 sm:grid-cols-[220px_1fr] sm:gap-10">
+            <h3 className="font-display text-lg font-semibold text-ink">{item.title}</h3>
+            <p className="max-w-[52ch] font-body text-sm leading-relaxed text-ink/60 sm:text-base">
+              {item.detail}
+            </p>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 function HowItWorks() {
   const steps = [
     { title: "Verify your phone", detail: "Log in with an OTP sent to your number — no password to remember." },
@@ -139,6 +172,10 @@ export default function HomePage() {
 
       <div className="mx-auto max-w-6xl px-6">
         <TrustBar />
+      </div>
+
+      <div className="mx-auto max-w-6xl px-6">
+        <WhySection />
       </div>
 
       <div className="mx-auto max-w-6xl px-6">
