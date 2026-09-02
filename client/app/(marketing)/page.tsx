@@ -157,6 +157,44 @@ function BranchesSection() {
   );
 }
 
+function ProductsPreview() {
+  const products = [
+    { name: "Quick Cash", range: "KES 1,000 – 20,000", bestFor: "Unexpected bills, emergencies, bridging until payday." },
+    { name: "Business Boost", range: "KES 5,000 – 50,000", bestFor: "Stocking inventory, a supplier payment, small equipment." },
+    { name: "School Fees Advance", range: "KES 2,000 – 30,000", bestFor: "School fees, exam fees, back-to-school costs." },
+  ];
+
+  return (
+    <section className="py-16 sm:py-24">
+      <div className="mb-12 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
+        <div className="max-w-md">
+          <div className="mb-2 font-mono text-xs uppercase tracking-wider text-marigold-dark">
+            Three products, one rule
+          </div>
+          <h2 className="font-display text-3xl font-semibold text-ink sm:text-4xl">
+            Built for different situations.
+          </h2>
+        </div>
+        <a
+          href="/products"
+          className="font-body text-sm font-medium text-savanna underline underline-offset-4 hover:text-savanna-light"
+        >
+          See all products →
+        </a>
+      </div>
+
+      <div className="grid grid-cols-1 gap-px overflow-hidden rounded-lg border border-mist bg-mist sm:grid-cols-3">
+        {products.map((product) => (
+          <div key={product.name} className="bg-white/50 p-6">
+            <h3 className="font-display text-lg font-semibold text-savanna">{product.name}</h3>
+            <div className="mt-1 font-mono text-xl font-semibold text-ink">{product.range}</div>
+            <p className="mt-3 font-body text-sm leading-relaxed text-ink/60">{product.bestFor}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
 
 function HowItWorks() {
   const steps = [
@@ -212,6 +250,10 @@ export default function HomePage() {
 
       <div className="mx-auto max-w-6xl px-6">
         <WhySection />
+      </div>
+      
+      <div className="mx-auto max-w-6xl px-6">
+        <ProductsPreview />
       </div>
 
       <div className="mx-auto max-w-6xl px-6">
