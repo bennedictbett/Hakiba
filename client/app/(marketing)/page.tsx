@@ -123,40 +123,6 @@ function WhySection() {
   );
 }
 
-function ReachSection() {
-  return (
-    <section className="bg-savanna py-16 sm:py-20">
-      <div className="mx-auto max-w-6xl px-6">
-        <div className="grid grid-cols-1 items-center gap-8 sm:grid-cols-[1.2fr_0.8fr] sm:gap-10">
-          <div>
-            <h2 className="max-w-[16ch] font-display text-2xl font-semibold text-paper sm:text-3xl">
-              Questions before you apply? Talk to a real person.
-            </h2>
-            <p className="mt-3 max-w-[42ch] font-body text-sm text-paper/70 sm:text-base">
-              Our support team responds on WhatsApp during working hours — no
-              call centre queue, no chatbot loop.
-            </p>
-          </div>
-
-          <div className="flex flex-wrap gap-3">
-            <a
-              href="https://wa.me/254700000000"
-              className="rounded-lg bg-marigold px-6 py-3 font-body text-sm font-medium text-ink transition-colors hover:bg-marigold-dark"
-            >
-              Chat on WhatsApp
-            </a>
-            <a
-              href="tel:+254700000000"
-              className="rounded-lg border border-paper/40 px-6 py-3 font-body text-sm font-medium text-paper transition-colors hover:border-paper"
-            >
-              Call +254 700 000 000
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
 
 function HowItWorks() {
   const steps = [
@@ -218,23 +184,43 @@ export default function HomePage() {
         <HowItWorks />
       </div>
 
-      <ReachSection />
+      
 
-      <section className="mx-auto max-w-6xl px-6 pb-24">
+            <section className="mx-auto max-w-6xl px-6 pb-24">
         <div className="rounded-lg bg-savanna px-8 py-12 text-center sm:py-16">
           <h2 className="font-display text-2xl font-semibold text-paper sm:text-3xl">
             Ready to apply?
           </h2>
-          <p className="mx-auto mt-3 max-w-md font-body text-savanna-light/90">
+          <p className="mx-auto mt-3 max-w-md font-body text-paper/80">
             It takes about two minutes, and you&apos;ll know your terms before you commit to anything.
           </p>
-          
+
           <a
             href="/apply"
             className="mt-6 inline-block rounded-md bg-marigold px-8 py-3 font-display text-sm font-semibold text-ink transition-colors hover:bg-marigold-dark"
           >
             Start your application
           </a>
+
+          <div className="mx-auto mt-10 max-w-md border-t border-paper/15 pt-8">
+            <p className="font-body text-sm text-paper/70">
+              Have questions first? Talk to a real person — no call centre queue, no chatbot loop.
+            </p>
+            <div className="mt-4 flex flex-wrap justify-center gap-3">
+              <a
+                href="https://wa.me/254700000000"
+                className="rounded-md border border-paper/30 px-5 py-2.5 font-body text-sm font-medium text-paper transition-colors hover:border-paper"
+              >
+                Chat on WhatsApp
+              </a>
+              <a
+                href="tel:+254700000000"
+                className="rounded-md border border-paper/30 px-5 py-2.5 font-body text-sm font-medium text-paper transition-colors hover:border-paper"
+              >
+                Call +254 700 000 000
+              </a>
+            </div>
+          </div>
         </div>
       </section>
 
