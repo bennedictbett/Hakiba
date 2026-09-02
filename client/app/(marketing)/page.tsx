@@ -123,6 +123,40 @@ function WhySection() {
   );
 }
 
+function BranchesSection() {
+  const branches = [
+    "Kimilili",
+    "Bungoma",
+    "Busia",
+    "Malaba",
+    "Rongo",
+    "Chwele",
+    "Kakamega",
+    "Webuye",
+  ];
+
+  return (
+    <section className="py-16 sm:py-24">
+      <div className="mb-12 max-w-md">
+        <div className="mb-2 font-mono text-xs uppercase tracking-wider text-marigold-dark">
+          Where we operate
+        </div>
+        <h2 className="font-display text-3xl font-semibold text-ink sm:text-4xl">
+          Our branches
+        </h2>
+      </div>
+
+      <div className="grid grid-cols-2 gap-x-8 gap-y-10 sm:grid-cols-4">
+        {branches.map((branch) => (
+          <div key={branch}>
+            <h3 className="font-display text-lg font-semibold text-ink">{branch}</h3>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 
 function HowItWorks() {
   const steps = [
@@ -184,8 +218,11 @@ export default function HomePage() {
         <HowItWorks />
       </div>
 
-      
+      <div className="mx-auto max-w-6xl px-6">
+        <BranchesSection />
+      </div>
 
+      
             <section className="mx-auto max-w-6xl px-6 pb-24">
         <div className="rounded-lg bg-savanna px-8 py-12 text-center sm:py-16">
           <h2 className="font-display text-2xl font-semibold text-paper sm:text-3xl">
