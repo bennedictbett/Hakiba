@@ -58,19 +58,6 @@ return (
         </p>
       </section>
 
-      <section className="mx-auto max-w-3xl px-6 py-16 sm:py-24">
-        <h2 className="mb-6 font-display text-2xl font-semibold text-ink sm:text-3xl">Licensing and compliance</h2>
-        <p className="mb-4 font-body leading-relaxed text-ink/70">
-          Hakiba operates as a licensed Digital Credit Provider under the Central Bank of Kenya&apos;s
-          regulatory framework for digital lenders. We handle your data in line with the Data
-          Protection Act, 2019 — you can review exactly what we collect and why in our{" "}
-          <a href="/privacy" className="text-savanna underline">Privacy Policy</a>.
-        </p>
-        <p className="font-body leading-relaxed text-ink/70">
-          Have a question about our licensing or how we operate? Reach out — we&apos;re glad to
-          answer directly rather than bury it in a document nobody reads.
-        </p>
-      </section>
 
       <footer className="border-t border-mist px-6 py-8 text-center font-body text-xs text-ink/50">
         Hakiba is a licensed Digital Credit Provider. Read our{" "}
