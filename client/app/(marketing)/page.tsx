@@ -136,7 +136,7 @@ function BranchesSection() {
   ];
 
   return (
-    <section className="py-16 sm:py-24">
+    <section id="branches" className="py-16 sm:py-24">
       <div className="mb-12 max-w-md">
         <div className="mb-2 font-mono text-xs uppercase tracking-wider text-marigold-dark">
           Where we operate
@@ -251,7 +251,7 @@ export default function HomePage() {
       <div className="mx-auto max-w-6xl px-6">
         <WhySection />
       </div>
-      
+
       <div className="mx-auto max-w-6xl px-6">
         <ProductsPreview />
       </div>
