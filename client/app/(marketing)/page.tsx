@@ -23,12 +23,12 @@ function LoanCalculator() {
   return (
     <div className="w-full max-w-md rounded-lg border border-mist bg-white/60 p-6 shadow-[0_2px_0_0_#D8D2C0] sm:p-8">
       <div className="mb-6 flex items-center justify-between">
-        <span className="font-mono text-xs uppercase tracking-wider text-savanna">Loan estimate</span>
+        <span className="font-mono text-xs uppercase tracking-wider text-savanna">Your estimate</span>
         <span className="rounded-full bg-savanna/10 px-2.5 py-1 font-mono text-xs text-savanna">Quick Cash</span>
       </div>
 
       <label htmlFor="loan-amount" className="mb-2 block font-body text-sm text-ink/70">
-        How much do you need?
+        How much would help right now?
       </label>
       <div className="mb-4 font-mono text-4xl font-semibold text-ink sm:text-5xl">
         KES {formatKES(amount)}
@@ -65,7 +65,7 @@ function LoanCalculator() {
       <a href="/apply"
         className="mt-6 block w-full rounded-md bg-marigold py-3 text-center font-display text-sm font-semibold text-ink transition-colors hover:bg-marigold-dark"
       >
-        Apply for this amount
+        Continue with KES {formatKES(amount)}
       </a>
     </div>
   );
@@ -92,10 +92,10 @@ function TrustBar() {
 
 function WhySection() {
   const items = [
-    { title: "Fees you see upfront", detail: "..." },
-    { title: "No CRB check required", detail: "..." },
-    { title: "Decisions in hours, not days", detail: "..." },
-    { title: "Straight to M-Pesa", detail: "..." },
+    { title: "Know what you're getting", detail: "See your fees and terms before you apply." },
+    { title: "Talk to a real person", detail: "Need help? Reach us directly through WhatsApp or phone." },
+    { title: "Built for real life", detail: "From school fees to business stock and unexpected expenses." },
+    { title: "Money where you need it", detail: "Approved funds are sent directly to M-Pesa." },
   ];
 
   return (
@@ -105,7 +105,7 @@ function WhySection() {
           Why people choose Hakiba
         </div>
         <h2 className="font-display text-3xl font-semibold text-ink sm:text-4xl">
-          Straightforward terms, nothing buried in fine print.
+          Money should be simple.
         </h2>
       </div>
 
@@ -142,7 +142,7 @@ function BranchesSection() {
           Where we operate
         </div>
         <h2 className="font-display text-3xl font-semibold text-ink sm:text-4xl">
-          Our branches
+          We&apos;re not just an app. We&apos;re around the corner.
         </h2>
       </div>
 
@@ -169,10 +169,10 @@ function ProductsPreview() {
       <div className="mb-12 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
         <div className="max-w-md">
           <div className="mb-2 font-mono text-xs uppercase tracking-wider text-marigold-dark">
-            Three products, one rule
+            Different needs
           </div>
           <h2 className="font-display text-3xl font-semibold text-ink sm:text-4xl">
-            Built for different situations.
+            One simple process.
           </h2>
         </div>
         <a
@@ -231,11 +231,11 @@ export default function HomePage() {
       <section className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 px-6 py-12 sm:py-20 lg:grid-cols-2">
         <div>
           <h1 className="font-display text-4xl font-bold leading-[1.1] text-ink sm:text-5xl lg:text-6xl">
-            Money when you<br />need it. No games.
+            A little help when<br />life gets expensive.
           </h1>
           <p className="mt-6 max-w-md font-body text-lg leading-relaxed text-ink/70">
-            Small loans for real situations — school fees, stock for your business, an
-            unexpected bill. See exactly what you&apos;ll get before you apply.
+            School fees, stock for your shop, an unexpected bill — get the money you need,
+            with clear terms before you apply.
           </p>
         </div>
 
@@ -264,8 +264,7 @@ export default function HomePage() {
         <BranchesSection />
       </div>
 
-      
-            <section className="mx-auto max-w-6xl px-6 pb-24">
+      <section className="mx-auto max-w-6xl px-6 pb-24">
         <div className="rounded-lg bg-savanna px-8 py-12 text-center sm:py-16">
           <h2 className="font-display text-2xl font-semibold text-paper sm:text-3xl">
             Ready to apply?
