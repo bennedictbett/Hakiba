@@ -5,12 +5,24 @@ import Nav from "@/components/Nav";
 
 const FAQS = [
   {
+    q: "How much can I borrow?",
+    a: "Loan amounts range from KES 1,000 to KES 50,000, depending on the product and your application. You can see an estimate of your repayment on the homepage calculator before you even apply.",
+  },
+  {
+    q: "What fees do I pay?",
+    a: "A single facilitation fee of 10% of your loan amount. There's no separate application fee, processing fee, or anything added later — just the one fee, shown upfront.",
+  },
+  {
     q: "Do I have to pay anything before getting my loan?",
     a: "No. Never. Our facilitation fee is deducted from the amount you receive — you never send us money upfront. If anyone claiming to be Hakiba asks you to pay a 'registration' or 'processing' fee before disbursement, it isn't us, and you should report it.",
   },
   {
-    q: "How much can I borrow?",
-    a: "Loan amounts range from KES 1,000 to KES 50,000, depending on the product and your application. You can see an estimate of your repayment on the homepage calculator before you even apply.",
+    q: "How much will I receive?",
+    a: "The facilitation fee is deducted from your loan amount before disbursement, so you receive the amount you asked for minus that fee. The homepage calculator shows you the exact figures before you apply, so there's no surprise on disbursement day.",
+  },
+  {
+    q: "How do repayments work?",
+    a: "Repayments are made through M-Pesa, using the paybill details shown in your account once your loan is approved. Your due date and total repayment amount are confirmed before you accept the loan offer.",
   },
   {
     q: "How long does approval take?",
@@ -27,6 +39,18 @@ const FAQS = [
   {
     q: "What happens if I can't repay on time?",
     a: "Contact us before your due date — we'd rather work out a plan with you than have you avoid us. Reach out through the contact page as soon as you know repayment might be a problem.",
+  },
+  {
+    q: "Do I need to visit a branch?",
+    a: "No — the entire process, from application to disbursement, happens on your phone. Our branches exist if you'd rather apply in person or talk to someone face-to-face.",
+  },
+  {
+    q: "Is Hakiba regulated?",
+    a: "Yes. Hakiba operates as a licensed Digital Credit Provider under the Central Bank of Kenya's regulatory framework for digital lenders.",
+  },
+  {
+    q: "How do I contact Hakiba?",
+    a: "Reach us on WhatsApp or by phone through our contact page, or visit one of our branches in person.",
   },
 ];
 
