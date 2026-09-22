@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from "react";
 import Nav from "@/components/Nav";
+import Reveal from "@/components/Reveal";
 
 const MONTHLY_RATE = 0.10; // 10% flat facilitation fee, deducted from disbursement - not paid upfront
 const MIN_AMOUNT = 1000;
@@ -198,10 +199,10 @@ function ProductsPreview() {
 
 function HowItWorks() {
   const steps = [
-    { title: "Verify your phone", detail: "Log in with an OTP sent to your number — no password to remember." },
     { title: "Tell us what you need", detail: "Choose an amount and a reason. Takes under two minutes." },
-    { title: "Get a decision", detail: "Most applications are reviewed within a couple of hours." },
-    { title: "Receive your funds", detail: "Approved loans are sent straight to your M-Pesa." },
+    { title: "Verify your details", detail: "Confirm your phone number with an OTP — no password to remember." },
+    { title: "Get your decision", detail: "Most applications are reviewed within a couple of hours." },
+    { title: "Receive your money", detail: "Approved loans are sent straight to your M-Pesa." },
   ];
 
   return (
@@ -209,14 +210,28 @@ function HowItWorks() {
       <h2 className="mb-12 font-display text-3xl font-semibold text-ink sm:text-4xl">
         From application to M-Pesa,<br />in four steps.
       </h2>
-      <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-        {steps.map((step, i) => (
-          <div key={step.title}>
-            <div className="mb-3 font-mono text-sm text-marigold-dark">{String(i + 1).padStart(2, "0")}</div>
-            <h3 className="mb-2 font-display text-lg font-semibold text-ink">{step.title}</h3>
-            <p className="font-body text-sm leading-relaxed text-ink/60">{step.detail}</p>
-          </div>
-        ))}
+
+      <div className="relative">
+        <div className="absolute left-0 right-0 top-5 hidden h-px bg-mist sm:block" aria-hidden="true" />
+
+        <div className="grid grid-cols-1 gap-10 sm:grid-cols-4 sm:gap-6">
+          {steps.map((step, i) => (
+            <div key={step.title} className="relative flex gap-4 sm:block sm:gap-0">
+              {i < steps.length - 1 && (
+                <div className="absolute left-5 top-10 h-full w-px bg-mist sm:hidden" aria-hidden="true" />
+              )}
+
+              <div className="relative z-10 flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full border-2 border-savanna bg-paper font-mono text-sm font-semibold text-savanna">
+                {String(i + 1).padStart(2, "0")}
+              </div>
+
+              <div className="sm:mt-4">
+                <h3 className="mb-2 font-display text-lg font-semibold text-ink">{step.title}</h3>
+                <p className="font-body text-sm leading-relaxed text-ink/60">{step.detail}</p>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
@@ -245,25 +260,36 @@ export default function HomePage() {
       </section>
 
       <div className="mx-auto max-w-6xl px-6">
-        <TrustBar />
+        <Reveal>
+          <TrustBar />
+        </Reveal>
       </div>
 
       <div className="mx-auto max-w-6xl px-6">
-        <WhySection />
+        <Reveal>
+          <WhySection />
+        </Reveal>
       </div>
 
       <div className="mx-auto max-w-6xl px-6">
-        <ProductsPreview />
+        <Reveal>
+          <ProductsPreview />
+        </Reveal>
       </div>
 
       <div className="mx-auto max-w-6xl px-6">
-        <HowItWorks />
+        <Reveal>
+          <HowItWorks />
+        </Reveal>
       </div>
 
       <div className="mx-auto max-w-6xl px-6">
-        <BranchesSection />
+        <Reveal>
+          <BranchesSection />
+        </Reveal>
       </div>
-
+       
+      <Reveal>
       <section className="mx-auto max-w-6xl px-6 pb-24">
         <div className="rounded-lg bg-savanna px-8 py-12 text-center sm:py-16">
           <h2 className="font-display text-2xl font-semibold text-paper sm:text-3xl">
@@ -301,6 +327,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      </Reveal>
 
       <footer className="border-t border-mist px-6 py-8 text-center font-body text-xs text-ink/50">
         Hakiba is a licensed Digital Credit Provider. Read our{" "}
