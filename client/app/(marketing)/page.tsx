@@ -237,6 +237,40 @@ function HowItWorks() {
   );
 }
 
+type Testimonial = {
+  quote: string;
+  name: string;
+  context: string; // e.g. "Shopkeeper, Bungoma" — role/location, not fabricated business details
+};
+
+const TESTIMONIALS: Testimonial[] = [];
+
+function TestimonialsSection() {
+  if (TESTIMONIALS.length === 0) return null;
+
+  return (
+    <section className="py-16 sm:py-24">
+      <div className="mb-12 max-w-md">
+        <div className="mb-2 font-mono text-xs uppercase tracking-wider text-marigold-dark">
+          From our customers
+        </div>
+        <h2 className="font-display text-3xl font-semibold text-ink sm:text-4xl">
+          Real people, real situations.
+        </h2>
+      </div>
+
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
+        {TESTIMONIALS.map((t) => (
+          <div key={t.name} className="rounded-lg border border-mist bg-white/50 p-6">
+            <p className="font-body text-sm leading-relaxed text-ink/70">&ldquo;{t.quote}&rdquo;</p>
+            <div className="mt-4 font-display text-sm font-semibold text-savanna">{t.name}</div>
+            <div className="font-body text-xs text-ink/50">{t.context}</div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
 
 export default function HomePage() {
   return (
@@ -268,6 +302,12 @@ export default function HomePage() {
       <div className="mx-auto max-w-6xl px-6">
         <Reveal>
           <WhySection />
+        </Reveal>
+      </div>
+
+      <div className="mx-auto max-w-6xl px-6">
+        <Reveal>
+          <TestimonialsSection />
         </Reveal>
       </div>
 
