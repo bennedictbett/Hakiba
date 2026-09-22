@@ -3,6 +3,7 @@
 import { useState, useMemo } from "react";
 import Nav from "@/components/Nav";
 import Reveal from "@/components/Reveal";
+import MarketScene from "@/components/MarketScene";
 
 const MONTHLY_RATE = 0.10; // 10% flat facilitation fee, deducted from disbursement - not paid upfront
 const MIN_AMOUNT = 1000;
@@ -101,13 +102,16 @@ function WhySection() {
 
   return (
     <section className="py-16 sm:py-24">
-      <div className="mb-12 max-w-md">
-        <div className="mb-2 font-mono text-xs uppercase tracking-wider text-marigold-dark">
-          Why people choose Hakiba
+      <div className="mb-12 flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-center">
+        <div className="max-w-md">
+          <div className="mb-2 font-mono text-xs uppercase tracking-wider text-marigold-dark">
+            Why people choose Hakiba
+          </div>
+          <h2 className="font-display text-3xl font-semibold text-ink sm:text-4xl">
+            Money should be simple.
+          </h2>
         </div>
-        <h2 className="font-display text-3xl font-semibold text-ink sm:text-4xl">
-          Money should be simple.
-        </h2>
+        <MarketScene className="hidden h-36 w-48 flex-shrink-0 lg:block" />
       </div>
 
       <div className="border-t border-mist">
