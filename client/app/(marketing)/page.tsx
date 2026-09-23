@@ -284,6 +284,45 @@ function TestimonialsSection() {
   );
 }
 
+function HumanConnection() {
+  return (
+    <section className="py-16 sm:py-24">
+      <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
+        <div className="relative">
+          <div className="relative h-80 overflow-hidden rounded-2xl shadow-lg sm:h-96">
+            <Image
+              src="/images/consultation.jpg"
+              alt="A Hakiba representative meeting with a customer"
+              fill
+              className="object-cover"
+            />
+          </div>
+
+          <div className="absolute -bottom-6 left-6 rounded-lg bg-paper px-5 py-4 shadow-lg ring-1 ring-mist sm:left-8">
+            <div className="flex items-center gap-2.5">
+              <span className="h-2 w-2 rounded-full bg-marigold" />
+              <span className="font-display text-sm font-semibold text-ink">Personal assessment</span>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div className="mb-3 font-mono text-xs font-semibold uppercase tracking-wider text-marigold-dark">
+            How we work with you
+          </div>
+          <h2 className="mb-5 font-display text-3xl font-semibold text-ink sm:text-4xl">
+            Real people. Real conversations. Real support.
+          </h2>
+          <p className="font-body text-lg leading-relaxed text-ink/70">
+            Hakiba combines financial services with personal interaction. Our team takes the
+            time to understand your needs and assess the security behind your application.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export default function HomePage() {
   return (
     <main>
@@ -341,6 +380,13 @@ export default function HomePage() {
         </div>
         <LoanCalculator />
       </section>
+
+       <div className="mx-auto max-w-6xl px-6">
+        <Reveal>
+          <HumanConnection />
+        </Reveal>
+      </div>
+
 
       <div className="mx-auto max-w-6xl px-6">
         <Reveal>
