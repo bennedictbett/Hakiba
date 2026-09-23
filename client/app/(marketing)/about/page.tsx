@@ -1,4 +1,6 @@
 import Nav from "@/components/Nav";
+import Image from "next/image";
+
 export default function AboutPage() {
   const values = [
     {
@@ -14,23 +16,47 @@ export default function AboutPage() {
       detail: "Most applications are reviewed the same day. We know what it's like to need money now, not next month.",
     },
   ];
-return (
+
+  return (
     <main>
-            <Nav />
-      
-      <section className="mx-auto max-w-3xl px-6 py-16 sm:py-24">
-        <h1 className="mb-6 font-display text-4xl font-bold leading-tight text-ink sm:text-5xl">
-          Lending, without the games.
-        </h1>
-        <p className="font-body text-lg leading-relaxed text-ink/70">
-          Hakiba started with a simple frustration: too many lenders in Kenya make borrowing feel
-          like a trap — hidden fees, upfront &quot;registration charges,&quot; and terms that only
-          make sense after you&apos;ve already signed. We built Hakiba to be the lender we wished
-          existed when we needed one.
-        </p>
+      <Nav />
+
+      <section className="mx-auto grid max-w-5xl grid-cols-1 items-center gap-12 px-6 py-16 sm:py-24 lg:grid-cols-2">
+        <div>
+          <h1 className="mb-6 font-display text-4xl font-bold leading-tight text-ink sm:text-5xl">
+            Lending, without the games.
+          </h1>
+          <p className="font-body text-lg leading-relaxed text-ink/70">
+            Hakiba started with a simple frustration: too many lenders in Kenya make borrowing feel
+            like a trap — hidden fees, upfront &quot;registration charges,&quot; and terms that only
+            make sense after you&apos;ve already signed. We built Hakiba to be the lender we wished
+            existed when we needed one.
+          </p>
+        </div>
+
+        <div className="relative hidden h-80 lg:block">
+          <div className="absolute right-0 top-0 h-56 w-64 overflow-hidden rounded-lg shadow-md">
+            <Image
+              src="/images/shop_stall_1.jpg"
+              alt="A shopkeeper at their stall"
+              width={400}
+              height={350}
+              className="h-full w-full object-cover"
+            />
+          </div>
+          <div className="absolute bottom-0 left-0 h-52 w-60 overflow-hidden rounded-lg border-4 border-paper shadow-md">
+            <Image
+              src="/images/clothe_stall_1.jpg"
+              alt="A clothing stall in a Kenyan market"
+              width={400}
+              height={350}
+              className="h-full w-full object-cover"
+            />
+          </div>
+        </div>
       </section>
 
-       <section className="border-y border-mist bg-white/40 py-16 sm:py-20">
+      <section className="border-y border-mist bg-white/40 py-16 sm:py-20">
         <div className="mx-auto max-w-5xl px-6">
           <h2 className="mb-12 font-display text-2xl font-semibold text-ink sm:text-3xl">What we do differently</h2>
           <div className="grid grid-cols-1 gap-10 sm:grid-cols-3">
@@ -57,7 +83,6 @@ return (
           answer directly rather than bury it in a document nobody reads.
         </p>
       </section>
-
 
       <footer className="border-t border-mist px-6 py-8 text-center font-body text-xs text-ink/50">
         Hakiba is a licensed Digital Credit Provider. Read our{" "}
