@@ -289,20 +289,57 @@ export default function HomePage() {
     <main>
       <Nav />
 
-      <section className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 px-6 py-12 sm:py-20 lg:grid-cols-2">
+      <section className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 px-6 py-16 sm:py-24 lg:grid-cols-2">
         <div>
-          <h1 className="font-display text-4xl font-bold leading-[1.1] text-ink sm:text-5xl lg:text-6xl">
-            A little help when<br />life gets expensive.
+          <div className="mb-4 font-mono text-xs font-semibold uppercase tracking-wider text-marigold-dark">
+            Financing built around you
+          </div>
+          <h1 className="font-display text-4xl font-bold leading-[1.05] text-ink sm:text-5xl lg:text-6xl">
+            Financial support,<br />built around you.
           </h1>
           <p className="mt-6 max-w-md font-body text-lg leading-relaxed text-ink/70">
-            School fees, stock for your shop, an unexpected bill — get the money you need,
-            with clear terms before you apply.
+            Access financing based on your needs and the security you provide, with a Hakiba
+            team member guiding you through the process.
           </p>
+          <div className="mt-8 flex flex-wrap gap-4">
+            
+            <a
+              href="/apply"
+              className="rounded-md bg-marigold px-7 py-3.5 font-display text-sm font-semibold text-ink transition-colors hover:bg-marigold-dark"
+            >
+              Get started
+            </a>
+            
+            <a
+              href="#branches"
+              className="rounded-md border border-savanna px-7 py-3.5 font-display text-sm font-semibold text-savanna transition-colors hover:bg-savanna hover:text-paper"
+            >
+              Find a branch
+            </a>
+          </div>
         </div>
 
-        <div className="flex justify-center lg:justify-end">
-          <LoanCalculator />
+        <div className="relative h-72 overflow-hidden rounded-2xl shadow-lg sm:h-96 lg:h-[420px]">
+          <Image
+            src="/images/shop_stall_1.jpg"
+            alt="A Kenyan small business owner at their shop"
+            fill
+            priority
+            className="object-cover"
+          />
         </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-6 py-16 sm:py-24">
+        <div className="mb-10 max-w-xl">
+          <h2 className="font-display text-3xl font-semibold text-ink sm:text-4xl">
+            Estimate your financing.
+          </h2>
+          <p className="mt-3 font-body text-ink/60">
+            See an example of how your requested amount and applicable fees could work.
+          </p>
+        </div>
+        <LoanCalculator />
       </section>
 
       <div className="mx-auto max-w-6xl px-6">
@@ -340,45 +377,45 @@ export default function HomePage() {
           <BranchesSection />
         </Reveal>
       </div>
-       
+
       <Reveal>
-      <section className="mx-auto max-w-6xl px-6 pb-24">
-        <div className="rounded-lg bg-savanna px-8 py-12 text-center sm:py-16">
-          <h2 className="font-display text-2xl font-semibold text-paper sm:text-3xl">
-            Ready to apply?
-          </h2>
-          <p className="mx-auto mt-3 max-w-md font-body text-paper/80">
-            It takes about two minutes, and you&apos;ll know your terms before you commit to anything.
-          </p>
-
-          <a
-            href="/apply"
-            className="mt-6 inline-block rounded-md bg-marigold px-8 py-3 font-display text-sm font-semibold text-ink transition-colors hover:bg-marigold-dark"
-          >
-            Start your application
-          </a>
-
-          <div className="mx-auto mt-10 max-w-md border-t border-paper/15 pt-8">
-            <p className="font-body text-sm text-paper/70">
-              Have questions first? Talk to a real person — no call centre queue, no chatbot loop.
+        <section className="mx-auto max-w-6xl px-6 pb-24">
+          <div className="rounded-lg bg-savanna px-8 py-12 text-center sm:py-16">
+            <h2 className="font-display text-2xl font-semibold text-paper sm:text-3xl">
+              Ready to apply?
+            </h2>
+            <p className="mx-auto mt-3 max-w-md font-body text-paper/80">
+              It takes about two minutes, and you&apos;ll know your terms before you commit to anything.
             </p>
-            <div className="mt-4 flex flex-wrap justify-center gap-3">
-              <a
-                href="https://wa.me/254700000000"
-                className="rounded-md border border-paper/30 px-5 py-2.5 font-body text-sm font-medium text-paper transition-colors hover:border-paper"
-              >
-                Chat on WhatsApp
-              </a>
-              <a
-                href="tel:+254700000000"
-                className="rounded-md border border-paper/30 px-5 py-2.5 font-body text-sm font-medium text-paper transition-colors hover:border-paper"
-              >
-                Call +254 700 000 000
-              </a>
+
+            <a
+              href="/apply"
+              className="mt-6 inline-block rounded-md bg-marigold px-8 py-3 font-display text-sm font-semibold text-ink transition-colors hover:bg-marigold-dark"
+            >
+              Start your application
+            </a>
+
+            <div className="mx-auto mt-10 max-w-md border-t border-paper/15 pt-8">
+              <p className="font-body text-sm text-paper/70">
+                Have questions first? Talk to a real person — no call centre queue, no chatbot loop.
+              </p>
+              <div className="mt-4 flex flex-wrap justify-center gap-3">
+                <a
+                  href="https://wa.me/254700000000"
+                  className="rounded-md border border-paper/30 px-5 py-2.5 font-body text-sm font-medium text-paper transition-colors hover:border-paper"
+                >
+                  Chat on WhatsApp
+                </a>
+                <a
+                  href="tel:+254700000000"
+                  className="rounded-md border border-paper/30 px-5 py-2.5 font-body text-sm font-medium text-paper transition-colors hover:border-paper"
+                >
+                  Call +254 700 000 000
+                </a>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
       </Reveal>
 
       <footer className="border-t border-mist px-6 py-8 text-center font-body text-xs text-ink/50">
