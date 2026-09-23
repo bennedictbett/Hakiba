@@ -3,7 +3,7 @@
 import { useState, useMemo } from "react";
 import Nav from "@/components/Nav";
 import Reveal from "@/components/Reveal";
-import MarketScene from "@/components/MarketScene";
+import Image from "next/image";
 
 const MONTHLY_RATE = 0.10; // 10% flat facilitation fee, deducted from disbursement - not paid upfront
 const MIN_AMOUNT = 1000;
@@ -111,7 +111,15 @@ function WhySection() {
             Money should be simple.
           </h2>
         </div>
-        <MarketScene className="hidden h-36 w-48 flex-shrink-0 lg:block" />
+        <div className="hidden h-40 w-56 flex-shrink-0 overflow-hidden rounded-lg lg:block">
+        <Image
+          src="/images/market_stall_1.jpg"
+          alt="A market stall with fresh produce"
+          width={400}
+          height={300}
+          className="h-full w-full object-cover"
+        />
+      </div>
       </div>
 
       <div className="border-t border-mist">
