@@ -23,9 +23,9 @@ const config: Config = {
         mist: "#D8D2C0",
       },
       fontFamily: {
-        display: ["var(--font-space-grotesk)", "sans-serif"],
-        body: ["var(--font-public-sans)", "sans-serif"],
-        mono: ["var(--font-plex-mono)", "monospace"],
+        display: ["var(--font-plus-jakarta)", "sans-serif"],
+        body: ["var(--font-inter)", "sans-serif"],
+        mono: ["var(--font-inter)", "sans-serif"],
       },
       borderRadius: {
         sm: "6px",
