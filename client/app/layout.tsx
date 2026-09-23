@@ -1,33 +1,27 @@
 import type { Metadata } from "next";
-import { Space_Grotesk, Public_Sans, IBM_Plex_Mono } from "next/font/google";
+import { Plus_Jakarta_Sans, Inter } from "next/font/google";
 import "./globals.css";
 
-const spaceGrotesk = Space_Grotesk({
+const plusJakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
-  variable: "--font-space-grotesk",
-  weight: ["500", "600", "700"],
+  variable: "--font-plus-jakarta",
+  weight: ["500", "600", "700", "800"],
 });
 
-const publicSans = Public_Sans({
+const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-public-sans",
+  variable: "--font-inter",
   weight: ["400", "500", "600"],
 });
 
-const plexMono = IBM_Plex_Mono({
-  subsets: ["latin"],
-  variable: "--font-plex-mono",
-  weight: ["500", "600"],
-});
-
 export const metadata: Metadata = {
-  title: "Hakiba — Quick loans, straightforward terms",
-  description: "Apply for a small loan in minutes. Clear terms, fast decisions, no hidden fees.",
+  title: "Hakiba — Financial support, built around you",
+  description: "Access financing based on your needs and the security you provide, with a Hakiba team member guiding you through the process.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${spaceGrotesk.variable} ${publicSans.variable} ${plexMono.variable}`}>
+    <html lang="en" className={`${plusJakarta.variable} ${inter.variable}`}>
       <body className="bg-paper text-ink font-body antialiased">{children}</body>
     </html>
   );
