@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 const LINKS = [
   { href: "/products", label: "Products" },
@@ -8,26 +9,23 @@ const LINKS = [
   { href: "/faq", label: "FAQ" },
 ];
 
-function HakibaMark() {
-  return (
-    <svg viewBox="0 0 40 40" className="h-7 w-7 sm:h-8 sm:w-8" aria-hidden="true">
-      <rect x="6" y="8" width="7" height="24" rx="1.5" fill="#1B4332" />
-      <rect x="27" y="8" width="7" height="24" rx="1.5" fill="#1B4332" />
-      <rect x="6" y="17" width="28" height="6" fill="#1B4332" />
-      <path d="M14 24 L26 12" stroke="#E8A33D" strokeWidth="4" strokeLinecap="round" />
-      <path d="M20 12 L26 12 L26 18" stroke="#E8A33D" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" fill="none" />
-    </svg>
-  );
-}
-
 export default function Nav() {
   const [open, setOpen] = useState(false);
 
   return (
     <nav className="relative mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
-      <a href="/" className="flex items-center gap-2">
-        <HakibaMark />
-        <span className="font-display text-xl font-bold text-savanna">Hakiba</span>
+      <a href="/" className="flex items-center gap-3">
+        <Image
+          src="/logo.png"
+          alt="Hakiba"
+          width={160}
+          height={44}
+          priority
+          className="h-9 w-auto sm:h-10"
+        />
+        <span className="hidden font-body text-[10px] uppercase tracking-wide text-ink/40 sm:block">
+          Tushirikiane Tustawi
+        </span>
       </a>
 
       <div className="flex items-center gap-6">
