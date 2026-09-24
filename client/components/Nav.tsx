@@ -14,7 +14,7 @@ export default function Nav() {
 
   return (
     <nav className="relative mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
-      <a href="/" className="flex items-center gap-3">
+      <a href="/" className="flex flex-col">
         <Image
           src="/logo.png"
           alt="Hakiba"
@@ -23,7 +23,7 @@ export default function Nav() {
           priority
           className="h-9 w-auto sm:h-10"
         />
-        <span className="hidden font-body text-[10px] uppercase tracking-wide text-ink/40 sm:block">
+        <span className="mt-1 hidden font-body text-[10px] uppercase tracking-wide text-ink/40 sm:block">
           Tushirikiane Tustawi
         </span>
       </a>
