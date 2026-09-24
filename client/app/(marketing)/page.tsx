@@ -211,16 +211,16 @@ function ProductsPreview() {
 
 function HowItWorks() {
   const steps = [
-    { title: "Tell us what you need", detail: "Choose an amount and a reason. Takes under two minutes." },
-    { title: "Verify your details", detail: "Confirm your phone number with an OTP — no password to remember." },
-    { title: "Get your decision", detail: "Most applications are reviewed within a couple of hours." },
-    { title: "Receive your money", detail: "Approved loans are sent straight to your M-Pesa." },
+    { title: "Start a conversation", detail: "Tell us what you need and speak with our team." },
+    { title: "Physical assessment", detail: "Our team assesses the security provided." },
+    { title: "Loan review", detail: "Your information and assessment are reviewed." },
+    { title: "Approval & disbursement", detail: "Once approved, your financing is processed." },
   ];
 
   return (
     <section className="py-16 sm:py-24">
       <h2 className="mb-12 font-display text-3xl font-semibold text-ink sm:text-4xl">
-        From application to M-Pesa,<br />in four steps.
+        From assessment to financing.
       </h2>
 
       <div className="relative">
