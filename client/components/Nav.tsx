@@ -21,7 +21,7 @@ export default function Nav() {
           width={160}
           height={44}
           priority
-          className="h-9 w-auto sm:h-10"
+          className="h-9 w-auto mix-blend-multiply sm:h-10"
         />
         <span className="mt-1 hidden font-body text-[10px] uppercase tracking-wide text-ink/40 sm:block">
           Tushirikiane Tustawi
