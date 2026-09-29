@@ -218,10 +218,10 @@ function HowItWorks() {
   ];
 
   return (
-    <section className="py-16 sm:py-24">
-      <h2 className="mb-12 font-display text-3xl font-semibold text-ink sm:text-4xl">
-        From assessment to financing.
-      </h2>
+      <section id="how-it-works" className="py-16 sm:py-24">
+        <h2 className="mb-12 font-display text-3xl font-semibold text-ink sm:text-4xl">
+          From assessment to financing.
+        </h2>
 
       <div className="relative">
         <div className="absolute left-0 right-0 top-5 hidden h-px bg-mist sm:block" aria-hidden="true" />
