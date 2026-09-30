@@ -26,15 +26,15 @@ const FAQS = [
   },
   {
     q: "How long does approval take?",
-    a: "Most applications are reviewed within a couple of hours during business hours. You'll get your reference number immediately, and we'll follow up by SMS or call once a decision is made.",
+    a: "It depends on your application and the physical assessment of the security you provide. Our team will meet with you, carry out the assessment, and guide you through each step so you always know what's next.",
   },
   {
     q: "What do I need to apply?",
-    a: "Your phone number, national ID number, and a few basic details about what you need the loan for. Some products may ask for an M-Pesa statement to help us assess your application fairly.",
+    a: "Your phone number, national ID number, a few basic details about what you need the loan for, and the security you're offering for our team to assess in person.",
   },
   {
     q: "How do I receive the money?",
-    a: "Approved loans are sent directly to the M-Pesa number linked to your account. No bank visit required.",
+    a: "Once your application is approved, funds are sent to the M-Pesa number linked to your account. Getting there starts with an in-person conversation with our team.",
   },
   {
     q: "What happens if I can't repay on time?",
@@ -42,7 +42,7 @@ const FAQS = [
   },
   {
     q: "Do I need to visit a branch?",
-    a: "No — the entire process, from application to disbursement, happens on your phone. Our branches exist if you'd rather apply in person or talk to someone face-to-face.",
+    a: "Yes. Financing at Hakiba includes an in-person assessment of the security you provide, so you'll need to visit one of our branches or arrange for our team to meet you.",
   },
   {
     q: "Is Hakiba regulated?",
