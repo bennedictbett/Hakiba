@@ -23,14 +23,18 @@ export default function AboutPage() {
 
       <section className="mx-auto grid max-w-5xl grid-cols-1 items-center gap-12 px-6 py-16 sm:py-24 lg:grid-cols-2">
         <div>
+          <div className="mb-3 font-mono text-xs font-semibold uppercase tracking-wider text-marigold-dark">
+            About Hakiba
+          </div>
           <h1 className="mb-6 font-display text-4xl font-bold leading-tight text-ink sm:text-5xl">
-            Lending, without the games.
+            Finance should feel personal.
           </h1>
           <p className="font-body text-lg leading-relaxed text-ink/70">
-            Hakiba started with a simple frustration: too many lenders in Kenya make borrowing feel
-            like a trap — hidden fees, upfront &quot;registration charges,&quot; and terms that only
-            make sense after you&apos;ve already signed. We built Hakiba to be the lender we wished
-            existed when we needed one.
+            Hakiba was built on a simple belief: money decisions are easier when there&apos;s a
+            real person on the other side of them. Our team meets you, understands your
+            situation, and assesses what you bring to the table — not just a form filled in
+            alone. We&apos;re a Kenyan company, run by people who understand what it means to
+            need support and not know who to trust.
           </p>
         </div>
 
