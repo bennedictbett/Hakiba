@@ -3,11 +3,11 @@ import Nav from "@/components/Nav";
 const SECTIONS = [
   {
     title: "1. Eligibility",
-    body: "To apply for a loan through Hakiba, you must be at least 18 years old, hold a valid Kenyan national ID, and have an active M-Pesa-registered phone number in your own name.",
+    body: "To apply for a loan through Hakiba, you must be at least 18 years old, hold a valid Kenyan national ID, have an active M-Pesa-registered phone number in your own name, and provide security for our team to assess in person.",
   },
   {
     title: "2. Applications and decisions",
-    body: "Submitting an application does not guarantee approval. We assess each application individually based on the information you provide and your repayment history with us, where applicable. Decisions are typically communicated within a couple of hours during business hours.",
+    body: "Submitting an application does not guarantee approval. We assess each application individually, including an in-person assessment of the security you provide. Our team will guide you through each step of the process.",
   },
   {
     title: "3. Fees",
