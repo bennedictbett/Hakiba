@@ -155,8 +155,12 @@ function BranchesSection() {
           Where we operate
         </div>
         <h2 className="font-display text-3xl font-semibold text-ink sm:text-4xl">
-          We&apos;re not just an app. We&apos;re around the corner.
+          Come and meet us.
         </h2>
+        <p className="mt-3 font-body text-ink/60">
+          Hakiba has physical branches where you can speak with our team and begin your
+          financing journey.
+        </p>
       </div>
 
       <div className="grid grid-cols-2 gap-x-8 gap-y-10 sm:grid-cols-4">
