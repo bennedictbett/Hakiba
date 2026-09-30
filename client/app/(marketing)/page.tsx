@@ -77,9 +77,9 @@ function TrustBar() {
   const items = [
     { label: "Digital Credit Provider", value: "CBK Licensed" },
     { label: "Applications processed", value: "12,000+" },
-    { label: "Average decision time", value: "Under 2 hrs" },
+    { label: "Branches across Kenya", value: "8" },
   ];
-
+  
   return (
     <div className="grid grid-cols-1 gap-6 border-y border-mist py-8 sm:grid-cols-3 sm:gap-4">
       {items.map((item) => (
